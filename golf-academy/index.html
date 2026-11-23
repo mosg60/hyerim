@@ -49,8 +49,10 @@
 <style>
   :root { --font-display: "Instrument Serif", "Noto Serif KR", Georgia, serif; --font-text: "Instrument Sans", "Noto Sans KR", system-ui, sans-serif; }
   html[lang="ko"] body { word-break: keep-all; overflow-wrap: anywhere; }
-  #consult .form { background: var(--g-alt); padding: var(--s-7); border-radius: var(--r-lg); }
-  @media (max-width: 639px) { #consult .form { padding: var(--s-5); } }
+  #consult .form { background: var(--surface); padding: var(--s-7); border-radius: var(--r-lg); }
+  #consult .consult-photo, #programs .programs-photo { aspect-ratio: 4 / 3; }
+  #consult .consult-steps { list-style: none; padding: 0; margin: 0; }
+  @media (max-width: 639px) { #consult .form { padding: var(--s-5); } #consult .consult-photo { aspect-ratio: 4 / 5; } #programs .programs-photo { aspect-ratio: 3 / 5; } #coaches .tile { --tile-ratio: 1 / 1; } }
 </style>
 </head>
 <body>
@@ -96,11 +98,11 @@
 
 <main id="top">
   <section class="hero hero--photo" data-enter data-calm="left" aria-labelledby="hero-h">
-    {{IMG_HERO}}
+    <picture class="hero__bg"><source media="(max-width: 639px)" srcset="assets/img/photo-f87126702-780x975.webp 780w" sizes="100vw"><img src="assets/img/photo-f87126702.webp" srcset="assets/img/photo-f87126702-500.webp 500w, assets/img/photo-f87126702-960.webp 960w, assets/img/photo-f87126702-1280.webp 1280w, assets/img/photo-f87126702.webp 1920w" sizes="100vw" width="1920" height="1272" alt="해 질 녘 안개 낀 연습장에서 드라이버를 끝까지 휘두른 골퍼의 실루엣" fetchpriority="high" decoding="async" data-source="stand-in" data-subject="stand-in"></picture>
     <div class="wrap"><div class="hero-text">
       <div class="hero__text">
         <h1 id="hero-h">분당 정자동 1:1 골프 레슨</h1>
-        <p class="hero__lead">실내 타석 8개와 퍼팅 그린을 갖춘 아카데미입니다. 첫 상담에서 스윙을 영상으로 찍고 8주 레슨 계획을 함께 짭니다. 입문 1:1 레슨은 <span data-assumed>월 32만 원</span>부터입니다.</p>
+        <p class="hero__lead">실내 타석 8개와 퍼팅 그린에서 KPGA 코치가 가르칩니다. 첫 상담에서 스윙을 찍고 8주 계획을 짭니다. 입문 1:1은 <span data-assumed>월 32만 원</span>부터.</p>
         <div class="btn-row"><a class="btn btn--primary" href="#consult">상담 신청하기<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><a class="btn btn--secondary" href="#programs">레슨 프로그램 보기</a></div>
       </div>
       <dl class="hero__facts">
@@ -112,7 +114,7 @@
     </div></div>
   </section>
 
-  <section class="section" id="programs" aria-labelledby="programs-h">
+  <section class="section" id="programs" style="--hm: 2" aria-labelledby="programs-h">
     <div class="wrap">
       <div class="grid grid--top fill">
         <div class="span-5 stack-6">
@@ -129,8 +131,8 @@
           </ul>
           <a class="link" href="#consult">맞는 프로그램 상담받기</a>
         </div>
-        <div class="frame frame--photo span-6 start-7" style="aspect-ratio: 4 / 3">
-          {{IMG_PROGRAMS}}
+        <div class="frame frame--photo span-6 start-7 programs-photo">
+          <img class="frame__img" src="assets/img/photo-f117411940.webp" srcset="assets/img/photo-f117411940-500.webp 500w, assets/img/photo-f117411940-960.webp 960w, assets/img/photo-f117411940.webp 1280w" sizes="(max-width: 639px) 188vw, (max-width: 1023px) 100vw, 50vw" width="1280" height="853" alt="이른 아침 안개가 낀 넓은 잔디 연습장" loading="lazy" decoding="async" data-source="stand-in" data-subject="stand-in">
         </div>
       </div>
     </div>
@@ -141,22 +143,22 @@
       <div class="mo-ph__head"><h2 id="process-h">8주 레슨은 이렇게 진행됩니다</h2><p>진단, 교정, 숏게임, 필드까지 네 단계로 나눠 가르칩니다.</p></div>
       <ol class="mo-ph__list">
         <li class="mo-ph__ch">
-          <figure class="mo-ph__pic">{{IMG_CH1}}</figure>
+          <figure class="mo-ph__pic"><img src="assets/img/photo-f52999204.webp" srcset="assets/img/photo-f52999204-500.webp 500w, assets/img/photo-f52999204-960.webp 960w, assets/img/photo-f52999204.webp 1280w" sizes="(max-width: 639px) 200vw, 100vw" width="1280" height="962" alt="볼 공급기가 줄지어 놓인 인조 매트 타석" loading="lazy" decoding="async" data-source="stand-in" data-subject="stand-in"></figure>
           <h3>1주 차: 스윙 진단</h3>
           <p>정면과 측면에서 스윙을 영상으로 찍고, 비거리와 방향을 기록합니다. 여기서 8주 목표를 정합니다.</p>
         </li>
         <li class="mo-ph__ch">
-          <figure class="mo-ph__pic">{{IMG_CH2}}</figure>
+          <figure class="mo-ph__pic"><img src="assets/img/photo-f8213984.webp" srcset="assets/img/photo-f8213984-500.webp 500w, assets/img/photo-f8213984-960.webp 960w, assets/img/photo-f8213984.webp 1280w" sizes="(max-width: 639px) 200vw, 100vw" width="1280" height="934" alt="코치가 퍼터를 든 학생 옆에서 자세를 잡아 주는 모습" loading="lazy" decoding="async" data-source="stand-in" data-subject="stand-in"></figure>
           <h3>2~5주 차: 자세 교정</h3>
           <p>코치가 옆에서 그립과 셋업부터 하나씩 고칩니다. 레슨마다 찍은 영상은 문자로 보내 드립니다.</p>
         </li>
         <li class="mo-ph__ch">
-          <figure class="mo-ph__pic">{{IMG_CH3}}</figure>
+          <figure class="mo-ph__pic"><img src="assets/img/photo-f38974393.webp" srcset="assets/img/photo-f38974393-500.webp 500w, assets/img/photo-f38974393-960.webp 960w, assets/img/photo-f38974393.webp 1280w" sizes="(max-width: 639px) 200vw, 100vw" width="1280" height="859" alt="벙커 옆 퍼팅 그린과 깃발, 그린 위의 골퍼 두 명" loading="lazy" decoding="async" data-source="stand-in" data-subject="stand-in"></figure>
           <h3>6~7주 차: 숏게임</h3>
           <p>100m 안쪽 어프로치와 퍼팅을 따로 연습합니다. 타수가 가장 빨리 줄어드는 구간입니다.</p>
         </li>
         <li class="mo-ph__ch">
-          <figure class="mo-ph__pic">{{IMG_CH4}}</figure>
+          <figure class="mo-ph__pic"><img src="assets/img/photo-f3711858.webp" srcset="assets/img/photo-f3711858-500.webp 500w, assets/img/photo-f3711858-960.webp 960w, assets/img/photo-f3711858.webp 1280w" sizes="(max-width: 639px) 200vw, 100vw" width="1280" height="958" alt="산이 보이는 페어웨이에서 티샷을 마친 골퍼" loading="lazy" decoding="async" data-source="stand-in" data-subject="stand-in"></figure>
           <h3>8주 차: 필드 레슨</h3>
           <p>코치와 함께 9홀을 돌며 연습장에서 배운 것을 코스에서 써 봅니다.</p>
         </li>
@@ -164,31 +166,31 @@
     </div>
   </section>
 
-  <section class="section ground-inverse" id="coaches" style="--hm: 2" aria-labelledby="coaches-h">
+  <section class="section ground-inverse" id="coaches" aria-labelledby="coaches-h">
     <div class="wrap">
       <div class="section-head">
         <h2 id="coaches-h">코치 4명을 소개합니다. <span class="muted">모두 KPGA 정회원입니다.</span></h2>
       </div>
       <div class="grid">
         <article class="tile tile--portrait span-3">
-          <div class="tile__media">{{IMG_C1}}</div>
+          <div class="tile__media"><img src="assets/img/photo-f105407720.webp" srcset="assets/img/photo-f105407720-500.webp 500w, assets/img/photo-f105407720-960.webp 960w, assets/img/photo-f105407720.webp 1280w" sizes="(max-width: 639px) 50vw, 25vw" width="1280" height="1969" alt="연습장에서 백스윙 정점에 이른 골퍼의 뒷모습" loading="lazy" decoding="async" data-source="stand-in" data-subject="stand-in"></div>
           <div class="tile__head"><h3>김도윤 대표 코치</h3></div>
-          <p>지도 경력 12년. 입문 레슨과 8주 계획을 맡습니다.</p>
+          <p>입문 레슨, 8주 계획</p>
         </article>
         <article class="tile tile--portrait span-3">
-          <div class="tile__media">{{IMG_C2}}</div>
+          <div class="tile__media"><img src="assets/img/photo-f1716648.webp" srcset="assets/img/photo-f1716648-500.webp 500w, assets/img/photo-f1716648-960.webp 960w, assets/img/photo-f1716648.webp 1280w" sizes="(max-width: 639px) 50vw, 25vw" width="1280" height="2065" alt="페어웨이에서 스윙을 마무리하는 골퍼" loading="lazy" decoding="async" data-source="stand-in" data-subject="stand-in"></div>
           <div class="tile__head"><h3>이서진 코치</h3></div>
-          <p>숏게임 클리닉 담당. 어프로치와 퍼팅을 가르칩니다.</p>
+          <p>숏게임 클리닉</p>
         </article>
         <article class="tile tile--portrait span-3">
-          <div class="tile__media">{{IMG_C3}}</div>
+          <div class="tile__media"><img src="assets/img/photo-f10105672-960.webp" srcset="assets/img/photo-f10105672-500.webp 500w, assets/img/photo-f10105672-960.webp 960w" sizes="(max-width: 639px) 50vw, 25vw" width="960" height="1433" alt="마른 잔디 연습장에서 아이언을 치는 골퍼" loading="lazy" decoding="async" data-source="stand-in" data-subject="stand-in"></div>
           <div class="tile__head"><h3>박지환 코치</h3></div>
-          <p>스코어 개선반과 필드 레슨을 맡습니다.</p>
+          <p>스코어 개선반, 필드</p>
         </article>
         <article class="tile tile--portrait span-3">
-          <div class="tile__media">{{IMG_C4}}</div>
+          <div class="tile__media"><img src="assets/img/photo-f191417.webp" srcset="assets/img/photo-f191417-500.webp 500w, assets/img/photo-f191417-960.webp 960w, assets/img/photo-f191417.webp 1280w" sizes="(max-width: 639px) 50vw, 25vw" width="1280" height="1280" alt="나무가 둘러싼 페어웨이에서 칩샷을 하는 골퍼" loading="lazy" decoding="async" data-source="stand-in" data-subject="stand-in"></div>
           <div class="tile__head"><h3>최유나 코치</h3></div>
-          <p>3인 그룹 레슨과 주말 입문반을 가르칩니다.</p>
+          <p>그룹 레슨, 주말 입문</p>
         </article>
       </div>
     </div>
@@ -207,6 +209,7 @@
           <div class="faq__item"><h3>레슨 시간을 바꿀 수 있나요?</h3><p>레슨 하루 전까지 문자로 알려 주시면 같은 주 안에서 옮겨 드립니다.</p></div>
           <div class="faq__item"><h3>주차할 수 있나요?</h3><p>건물 지하 주차장을 레슨 시간 동안 무료로 쓰실 수 있습니다.</p></div>
           <div class="faq__item"><h3>중간에 그만두면 환불되나요?</h3><p>남은 회차만큼 환불해 드립니다. 첫 레슨 전에는 전액 환불입니다.</p></div>
+          <div class="faq__item"><h3>레슨 없이 타석만 쓸 수 있나요?</h3><p>네. 타석 월 회원은 <span data-assumed>15만 원</span>이고, 레슨 수강생은 레슨이 없는 날에도 하루 1시간 무료로 쓰실 수 있습니다.</p></div>
         </div>
       </div>
     </div>
@@ -215,14 +218,15 @@
   <section class="section" id="consult" style="--hm: 2" aria-labelledby="consult-h">
     <div class="wrap">
       <div class="grid grid--top">
-        <div class="span-6 stack-5">
+        <div class="span-5 stack-5">
           <div class="section-head">
             <h2 id="consult-h">상담 신청</h2>
             <p>이름과 연락처를 남겨 주시면 코치가 하루 안에 전화드립니다. 첫 상담과 스윙 촬영은 무료입니다.</p>
           </div>
-          <div class="frame frame--photo" style="aspect-ratio: 4 / 3">{{IMG_CONSULT}}</div>
+          <div class="frame frame--photo consult-photo"><img class="frame__img" src="assets/img/photo-f1249025.webp" srcset="assets/img/photo-f1249025-500.webp 500w, assets/img/photo-f1249025-960.webp 960w, assets/img/photo-f1249025.webp 1280w" sizes="(max-width: 639px) 166vw, (max-width: 1023px) 100vw, 50vw" width="1280" height="962" alt="거리 표지판이 서 있는 야외 연습장과 타석 매트" loading="lazy" decoding="async" data-source="stand-in" data-subject="stand-in"></div>
         </div>
-        <form class="form span-6 start-7" action="mailto:consult@ongyeol-golf.example" method="post" enctype="text/plain" data-endpoint="" data-sent="상담 신청이 접수됐습니다. 하루 안에 전화드립니다." novalidate>
+        <div class="span-6 start-7 stack-6">
+        <form class="form" action="mailto:consult@ongyeol-golf.example" method="post" enctype="text/plain" data-endpoint="" data-sent="상담 신청이 접수됐습니다. 하루 안에 전화드립니다." novalidate>
           <div class="field"><label for="f-name">이름</label>
             <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-err">
             <p class="field__error" id="f-name-err" hidden>이름을 적어 주세요.</p></div>
@@ -246,6 +250,12 @@
           <p class="form__status" role="status" data-form-status></p>
           <p class="t-small muted">하루 안에 전화드립니다.</p>
         </form>
+        <ol class="rows consult-steps">
+          <li><span class="rows__name">1. 전화 상담</span><p>레슨 경험과 목표를 여쭙고 방문 날짜를 정합니다.</p><span class="rows__value">10분</span></li>
+          <li><span class="rows__name">2. 스윙 촬영</span><p>아카데미에서 정면과 측면 스윙을 찍습니다.</p><span class="rows__value">30분</span></li>
+          <li><span class="rows__name">3. 8주 계획 받기</span><p>영상을 본 코치가 레슨 계획을 문자로 보내 드립니다.</p><span class="rows__value">다음 날</span></li>
+        </ol>
+        </div>
       </div>
     </div>
   </section>
@@ -268,13 +278,12 @@
         </div>
         <div class="span-2 footer__col"><h3>레슨</h3><ul><li><a href="#programs">프로그램과 가격</a></li><li><a href="#process">레슨 과정</a></li></ul></div>
         <div class="span-2 footer__col"><h3>아카데미</h3><ul><li><a href="#coaches">코치</a></li><li><a href="#faq">자주 묻는 질문</a></li></ul></div>
-        <div class="span-2 footer__col"><h3>상담</h3><ul><li><a href="#consult">상담 신청</a></li></ul></div>
-        <div class="span-2 footer__col"><h3>위치</h3><ul><li><a href="https://www.openstreetmap.org/search?query=%EC%A0%95%EC%9E%90%EB%8F%99%20%EB%B6%84%EB%8B%B9%EA%B5%AC%20%EC%84%B1%EB%82%A8%EC%8B%9C">분당구 정자동 주변 보기</a></li></ul></div>
+                <div class="span-4 footer__col"><h3>위치</h3><ul><li><a href="https://www.openstreetmap.org/search?query=%EC%A0%95%EC%9E%90%EB%8F%99%20%EB%B6%84%EB%8B%B9%EA%B5%AC%20%EC%84%B1%EB%82%A8%EC%8B%9C">분당구 정자동 주변 보기</a></li></ul></div>
       </div>
       <div class="footer__legal">
         <span>&copy; 2026 온결 골프 아카데미</span>
         <div class="socials"></div>
-        {{CREDITS}}
+        <a class="credits" href="credits.html">사진 출처: Wikimedia Commons</a>
       </div>
     </div>
   </div>

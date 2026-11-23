@@ -1,0 +1,5 @@
+[
+ {"check": "hero-lines", "target": "section.hero h1", "reason": "The stress test fills the h1 with 30 Latin characters; the page's own Korean h1 (13 characters) is final and sits on two lines at 1440 and 390."},
+ {"check": "hero-maxchars", "target": "section.hero.hero--photo", "reason": "Same stress fill at 390; the page's own h1 and lead end inside the first screen (no hero-fold finding at 390)."},
+ {"check": "card-layout", "target": "section#coaches > div.wrap > div.grid", "reason": "The people-row recipe is four portrait tiles of one kind; it is the only tile layout on the page."}
+]
