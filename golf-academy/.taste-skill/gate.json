@@ -1,0 +1,1618 @@
+{
+ "start": "2026-11-23T12:59:14.282Z",
+ "round": 0,
+ "idle": 0,
+ "errors": 0,
+ "status": "fail",
+ "history": [
+  {
+   "at": "2026-11-23T13:19:01.260Z",
+   "mode": "hook",
+   "host": "claude",
+   "status": "fail",
+   "fails": 42,
+   "round": 0,
+   "reused": false,
+   "stopHookActive": false,
+   "decision": "block",
+   "reason": "42 FAILs remain (not a round: the gate has not been run by hand in this build yet):"
+  }
+ ],
+ "max": 3,
+ "marker": {
+  "page": "index.html",
+  "url": null,
+  "root": null,
+  "kind": "service",
+  "category": "golf lessons",
+  "primary": "상담 신청하기",
+  "rounds": 3,
+  "start": "2026-11-23T12:59:14.282Z",
+  "by": "gate.mjs --start"
+ },
+ "roundKey": "042266b5e939f47b:da39a3ee",
+ "roundFree": true,
+ "idleFree": false,
+ "blockKey": "042266b5e939f47b:da39a3ee",
+ "fp": "042266b5e939f47b",
+ "page": "index.html",
+ "found": {
+  "fails": [
+   {
+    "check": "placeholder",
+    "where": "main#top > section.hero.hero--photo \"{{IMG_HERO}} 분당 정자동 1:1 골프 레슨 실내 타석 8개와 \"",
+    "msg": "\"{{IMG_HERO}}\" is a placeholder left on the page (and 11 more like it: \"{{IMG_PROGRAMS}}\", \"{{IMG_CH1}}\", \"{{IMG_CH2}}\", \"{{IMG_CH3}}\", ...)",
+    "fix": "write the real words: take the name or figure from the brief, or remove the claim; no bracketed placeholder ships",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "placeholder"
+    ],
+    "wheres": [
+     "main#top > section.hero.hero--photo \"{{IMG_HERO}} 분당 정자동 1:1 골프 레슨 실내 타석 8개와 \""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "main#top > section.hero.hero--photo \"분당 정자동 1:1 골프 레슨\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "main#top > section.hero.hero--photo \"분당 정자동 1:1 골프 레슨\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "section#programs \"레슨 프로그램과 가격\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#programs \"레슨 프로그램과 가격\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "section#coaches \"코치 4명을 소개합니다. 모두 KPGA 정회원입니다.\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#coaches \"코치 4명을 소개합니다. 모두 KPGA 정회원입니다.\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "section#consult \"상담 신청\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#consult \"상담 신청\""
+    ]
+   },
+   {
+    "check": "card-family",
+    "where": "section#faq > div.wrap > div.grid.grid--top > div.faq.span-6 \"클럽이 없어도 시작할 수 있나요?\"",
+    "msg": "3 cards of one kind (.span-6) set their titles in 2 faces: instrument sans (1, like \"클럽이 없어도 시작할 수 있나요?\"), instrument serif (1, like \"상담 신청\")",
+    "fix": "draw one card part one way: one fill and one title face for every card of a kind (one featured card may differ)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "card-family"
+    ],
+    "wheres": [
+     "section#faq > div.wrap > div.grid.grid--top > div.faq.span-6 \"클럽이 없어도 시작할 수 있나요?\""
+    ]
+   },
+   {
+    "check": "copy-headline",
+    "where": "h1#hero-h \"분당 정자동 1:1 골프 레슨\"",
+    "msg": "\"분당 정자동 1:1 골프 레슨\" does not name what is sold (golf lessons, golf, lessons, from flags)",
+    "fix": "put the category noun in the h1 (and who it is for, or where), in 2 to 8 words",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "copy-headline"
+    ],
+    "wheres": [
+     "h1#hero-h \"분당 정자동 1:1 골프 레슨\""
+    ]
+   },
+   {
+    "check": "text-contrast",
+    "where": "main#top > section.hero.hero--photo \"{{IMG_HERO}} 분당 정자동 1:1 골프 레슨 실내 타석 8개와 \"",
+    "msg": "body text in #333231 on #1b1b1b reads 1.35:1 (needs 7:1)",
+    "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "text-contrast"
+    ],
+    "wheres": [
+     "main#top > section.hero.hero--photo \"{{IMG_HERO}} 분당 정자동 1:1 골프 레슨 실내 타석 8개와 \""
+    ]
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#faq / section#consult",
+    "msg": "482px between these sections, +80% against the median 268px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-gaps"
+    ],
+    "wheres": [
+     "section#faq / section#consult"
+    ]
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#consult / footer#contact",
+    "msg": "466px between these sections, +75% against the median 267px of gaps at a change of ground",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-gaps"
+    ],
+    "wheres": [
+     "section#consult / footer#contact"
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "section#process > div.wrap.mo-ph > div.mo-ph__stage \"{{IMG_CH1}}{{IMG_CH2}}{{IMG_CH3}}{{IMG_C\"",
+    "msg": "a band: a box 89% of the section wide on a ground of its own that holds only text: the section's own ground is the band (SR-4)",
+    "fix": "put every block of <main> in a <section>, and give a band its own section instead of a ground inside one",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section",
+     "neighbour"
+    ],
+    "wheres": [
+     "section#process > div.wrap.mo-ph > div.mo-ph__stage \"{{IMG_CH1}}{{IMG_CH2}}{{IMG_CH3}}{{IMG_C\"",
+     "#process section.section.is-live \"8주 레슨은 이렇게 진행됩니다진단, 교정, 숏게임, 필드까\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "div.grid.grid--top > form.form.span-6 > div.field:nth-of-type(1) > label \"이름\"",
+    "msg": "4 text blocks start on a left line at x 780, 700px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (also \"관심 있는 레슨\", \"전화받기 편한 시간\", \"하루 안에 전화드립니다.\") (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "div.grid.grid--top > form.form.span-6 > div.field:nth-of-type(1) > label \"이름\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "h1#hero-h \"분당 정자동 1:1 골프 레슨\"",
+    "msg": "the h1 starts 48px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "h1#hero-h \"분당 정자동 1:1 골프 레슨\""
+    ]
+   },
+   {
+    "check": "split-pair",
+    "where": "section#consult > div.wrap > div.grid.grid--top \"상담 신청 이름과 연락처를 남겨 주시면 코치가 하루 안에 전화드립니다. \"",
+    "msg": "the two columns of the split start 49px apart at the top: a split's columns are top-aligned, 8px either way (SR-8)",
+    "fix": "top-align both columns of the split (align-items: start)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "split-pair"
+    ],
+    "wheres": [
+     "section#consult > div.wrap > div.grid.grid--top \"상담 신청 이름과 연락처를 남겨 주시면 코치가 하루 안에 전화드립니다. \""
+    ]
+   },
+   {
+    "check": "off-grid",
+    "where": "div.grid.grid--top > form.form.span-6 > div.field:nth-of-type(1) > label \"이름\"",
+    "msg": "left edge at 48px, 24px off the page margin at 24px (50 elements, like div.frame.frame--photo); 4 more in this section off the grid too (label at 48px, label at 48px, label at 48px, p.t-small.muted at 48px)",
+    "fix": "move it onto the page margin, or the column edge its section uses",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "off-grid"
+    ],
+    "wheres": [
+     "div.grid.grid--top > form.form.span-6 > div.field:nth-of-type(1) > label \"이름\""
+    ]
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#programs / section#process",
+    "msg": "30px between these sections, -84% against the median 187px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-gaps"
+    ],
+    "wheres": [
+     "section#programs / section#process"
+    ]
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#coaches / section#faq",
+    "msg": "931px between these sections (never on one screen), +398% against the median 187px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-gaps"
+    ],
+    "wheres": [
+     "section#coaches / section#faq"
+    ]
+   },
+   {
+    "check": "collide",
+    "where": "div.span-5.stack-6 > ul.rows > li:nth-of-type(5) > p \"주 1회, 같은 수준 세 명이 함께\"",
+    "msg": "the words \"주 1회, 같은 수준 세 명이 함께\" lie over \"8주 레슨은 이렇게 진행됩니다\" of another section: two lines in one place (they run out of their own section, which is shorter than what it holds)",
+    "fix": "on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons; pad the page under a fixed bar by the bar's height (top: the first section; end: the footer)",
+    "widths": [
+     320
+    ],
+    "from": "consistency",
+    "ids": [
+     "collide"
+    ],
+    "wheres": [
+     "div.span-5.stack-6 > ul.rows > li:nth-of-type(5) > p \"주 1회, 같은 수준 세 명이 함께\""
+    ]
+   },
+   {
+    "check": "collide",
+    "where": "div.wrap > div.grid.grid--top > div.span-5.stack-6 > a.link \"맞는 프로그램 상담받기\"",
+    "msg": "the words \"맞는 프로그램 상담받기\" lie over \"진단, 교정, 숏게임, 필드까지 네 단계로 나눠 가르칩니다\" of another section: two lines in one place (they run out of their own section, which is shorter than what it holds)",
+    "fix": "on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons; pad the page under a fixed bar by the bar's height (top: the first section; end: the footer)",
+    "widths": [
+     320
+    ],
+    "from": "consistency",
+    "ids": [
+     "collide"
+    ],
+    "wheres": [
+     "div.wrap > div.grid.grid--top > div.span-5.stack-6 > a.link \"맞는 프로그램 상담받기\""
+    ]
+   },
+   {
+    "check": "collide",
+    "where": "section#process > div.wrap.mo-ph > div.mo-ph__stage > figure.mo-ph__pic:nth-of-type(1) \"{{IMG_CH1}}\"",
+    "msg": "the words \"{{IMG_CH1}}\" lie over \"{{IMG_CH2}}\": two lines in one place",
+    "fix": "on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons; pad the page under a fixed bar by the bar's height (top: the first section; end: the footer)",
+    "widths": [
+     320
+    ],
+    "from": "consistency",
+    "ids": [
+     "collide"
+    ],
+    "wheres": [
+     "section#process > div.wrap.mo-ph > div.mo-ph__stage > figure.mo-ph__pic:nth-of-type(1) \"{{IMG_CH1}}\""
+    ]
+   },
+   {
+    "check": "collide",
+    "where": "section#process > div.wrap.mo-ph > div.mo-ph__stage > figure.mo-ph__pic:nth-of-type(2) \"{{IMG_CH2}}\"",
+    "msg": "the words \"{{IMG_CH2}}\" lie over \"{{IMG_CH3}}\": two lines in one place",
+    "fix": "on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons; pad the page under a fixed bar by the bar's height (top: the first section; end: the footer)",
+    "widths": [
+     320
+    ],
+    "from": "consistency",
+    "ids": [
+     "collide"
+    ],
+    "wheres": [
+     "section#process > div.wrap.mo-ph > div.mo-ph__stage > figure.mo-ph__pic:nth-of-type(2) \"{{IMG_CH2}}\""
+    ]
+   },
+   {
+    "check": "collide",
+    "where": "section#process > div.wrap.mo-ph > div.mo-ph__stage > figure.mo-ph__pic:nth-of-type(3) \"{{IMG_CH3}}\"",
+    "msg": "the words \"{{IMG_CH3}}\" lie over \"{{IMG_CH4}}\": two lines in one place",
+    "fix": "on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons; pad the page under a fixed bar by the bar's height (top: the first section; end: the footer)",
+    "widths": [
+     320
+    ],
+    "from": "consistency",
+    "ids": [
+     "collide"
+    ],
+    "wheres": [
+     "section#process > div.wrap.mo-ph > div.mo-ph__stage > figure.mo-ph__pic:nth-of-type(3) \"{{IMG_CH3}}\""
+    ]
+   },
+   {
+    "check": "collide",
+    "where": "section#programs > div.wrap > div.grid.grid--top > div.frame.frame--photo \"{{IMG_PROGRAMS}}\"",
+    "msg": "the words \"{{IMG_PROGRAMS}}\" and the card div.wrap.mo-ph > div.mo-ph__stage of another section lie in one place: the words run out of their section, which is shorter than what it holds",
+    "fix": "on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons; pad the page under a fixed bar by the bar's height (top: the first section; end: the footer)",
+    "widths": [
+     320
+    ],
+    "from": "consistency",
+    "ids": [
+     "collide"
+    ],
+    "wheres": [
+     "section#programs > div.wrap > div.grid.grid--top > div.frame.frame--photo \"{{IMG_PROGRAMS}}\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#consult div.btn-row \"상담 신청하기\"",
+    "msg": "starts at x 780; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#consult div.btn-row \"상담 신청하기\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#consult p.t-small.muted \"하루 안에 전화드립니다.\"",
+    "msg": "starts at x 780; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#consult p.t-small.muted \"하루 안에 전화드립니다.\""
+    ]
+   },
+   {
+    "check": "sparse",
+    "where": "#faq section.section \"자주 묻는 질문 여기 없는 질문은 상담 때 물어봐 주세요.\"",
+    "msg": "its content fills 46% of its screen; merge it or give it its visual (0.55 is the aim)",
+    "fix": "fill the section or make it a screen shorter",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "sparse"
+    ],
+    "wheres": [
+     "#faq section.section \"자주 묻는 질문 여기 없는 질문은 상담 때 물어봐 주세요.\""
+    ]
+   },
+   {
+    "check": "hero-lines",
+    "where": "section.hero h1",
+    "msg": "the check fills the h1 to 32 characters (this hero's maxChars in heroes.json), not the page's own: it takes 5 lines at 1440, 3 at most",
+    "fix": "the check fills the h1 to this hero's maxChars, not your own: take the next type pairing the deal printed (start.mjs); when the h1 is final and fits, waive it (target: section.hero h1)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "hero-lines"
+    ],
+    "wheres": [
+     "section.hero h1"
+    ]
+   },
+   {
+    "check": "sparse",
+    "where": "#coaches section.section.ground-inverse \"코치 4명을 소개합니다. 모두 KPGA 정회원입니다. {{\"",
+    "msg": "its content fills 45% of its screen; merge it or give it its visual (0.55 is the aim)",
+    "fix": "fill the section or make it a screen shorter",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "sparse"
+    ],
+    "wheres": [
+     "#coaches section.section.ground-inverse \"코치 4명을 소개합니다. 모두 KPGA 정회원입니다. {{\""
+    ]
+   },
+   {
+    "check": "hero-fold",
+    "where": "section.hero.hero--photo section.hero.hero--photo \"{{IMG_HERO}} 분당 정자동 1:1 골프 레슨 실내\"",
+    "msg": "ends at y 866, past the fold (844): 1.03 screens tall",
+    "fix": "the hero fills the first screen alone, its button inside it",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "hero-fold"
+    ],
+    "wheres": [
+     "section.hero.hero--photo section.hero.hero--photo \"{{IMG_HERO}} 분당 정자동 1:1 골프 레슨 실내\""
+    ]
+   },
+   {
+    "check": "hero-maxchars",
+    "where": "section.hero.hero--photo section.hero.hero--photo \"{{IMG_HERO}} 분당 정자동 1:1 골프 레슨 그린\"",
+    "msg": "with a 32-character h1 (heroes.json maxChars): ends at y 1017, past the fold (844): 1.20 screens tall",
+    "fix": "shorten the h1 or give the hero room for the longest headline",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "hero-maxchars"
+    ],
+    "wheres": [
+     "section.hero.hero--photo section.hero.hero--photo \"{{IMG_HERO}} 분당 정자동 1:1 골프 레슨 그린\""
+    ]
+   },
+   {
+    "check": "copy-residue",
+    "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+    "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+    "widths": [],
+    "from": "copy",
+    "where": "copy \"{{IMG_HERO}}\" in \"{{IMG_HERO}}\"",
+    "ids": [
+     "copy-residue"
+    ],
+    "wheres": [
+     "copy \"{{IMG_HERO}}\" in \"{{IMG_HERO}}\""
+    ]
+   },
+   {
+    "check": "copy-residue",
+    "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+    "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+    "widths": [],
+    "from": "copy",
+    "where": "copy \"{{IMG_PROGRAMS}}\" in \"{{IMG_PROGRAMS}}\"",
+    "ids": [
+     "copy-residue"
+    ],
+    "wheres": [
+     "copy \"{{IMG_PROGRAMS}}\" in \"{{IMG_PROGRAMS}}\""
+    ]
+   },
+   {
+    "check": "copy-residue",
+    "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+    "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+    "widths": [],
+    "from": "copy",
+    "where": "copy \"{{IMG_CH1}}\" in \"{{IMG_CH1}}\"",
+    "ids": [
+     "copy-residue"
+    ],
+    "wheres": [
+     "copy \"{{IMG_CH1}}\" in \"{{IMG_CH1}}\""
+    ]
+   },
+   {
+    "check": "copy-residue",
+    "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+    "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+    "widths": [],
+    "from": "copy",
+    "where": "copy \"{{IMG_CH2}}\" in \"{{IMG_CH2}}\"",
+    "ids": [
+     "copy-residue"
+    ],
+    "wheres": [
+     "copy \"{{IMG_CH2}}\" in \"{{IMG_CH2}}\""
+    ]
+   },
+   {
+    "check": "copy-residue",
+    "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+    "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+    "widths": [],
+    "from": "copy",
+    "where": "copy \"{{IMG_CH3}}\" in \"{{IMG_CH3}}\"",
+    "ids": [
+     "copy-residue"
+    ],
+    "wheres": [
+     "copy \"{{IMG_CH3}}\" in \"{{IMG_CH3}}\""
+    ]
+   },
+   {
+    "check": "copy-residue",
+    "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+    "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+    "widths": [],
+    "from": "copy",
+    "where": "copy \"{{IMG_CH4}}\" in \"{{IMG_CH4}}\"",
+    "ids": [
+     "copy-residue"
+    ],
+    "wheres": [
+     "copy \"{{IMG_CH4}}\" in \"{{IMG_CH4}}\""
+    ]
+   },
+   {
+    "check": "copy-residue",
+    "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+    "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+    "widths": [],
+    "from": "copy",
+    "where": "copy \"{{IMG_C1}}\" in \"{{IMG_C1}}\"",
+    "ids": [
+     "copy-residue"
+    ],
+    "wheres": [
+     "copy \"{{IMG_C1}}\" in \"{{IMG_C1}}\""
+    ]
+   },
+   {
+    "check": "copy-residue",
+    "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+    "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+    "widths": [],
+    "from": "copy",
+    "where": "copy \"{{IMG_C2}}\" in \"{{IMG_C2}}\"",
+    "ids": [
+     "copy-residue"
+    ],
+    "wheres": [
+     "copy \"{{IMG_C2}}\" in \"{{IMG_C2}}\""
+    ]
+   },
+   {
+    "check": "copy-residue",
+    "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+    "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+    "widths": [],
+    "from": "copy",
+    "where": "copy \"{{IMG_C3}}\" in \"{{IMG_C3}}\"",
+    "ids": [
+     "copy-residue"
+    ],
+    "wheres": [
+     "copy \"{{IMG_C3}}\" in \"{{IMG_C3}}\""
+    ]
+   },
+   {
+    "check": "copy-residue",
+    "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+    "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+    "widths": [],
+    "from": "copy",
+    "where": "copy \"{{IMG_C4}}\" in \"{{IMG_C4}}\"",
+    "ids": [
+     "copy-residue"
+    ],
+    "wheres": [
+     "copy \"{{IMG_C4}}\" in \"{{IMG_C4}}\""
+    ]
+   },
+   {
+    "check": "copy-residue",
+    "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+    "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+    "widths": [],
+    "from": "copy",
+    "where": "copy \"{{IMG_CONSULT}}\" in \"{{IMG_CONSULT}}\"",
+    "ids": [
+     "copy-residue"
+    ],
+    "wheres": [
+     "copy \"{{IMG_CONSULT}}\" in \"{{IMG_CONSULT}}\""
+    ]
+   },
+   {
+    "check": "copy-residue",
+    "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+    "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+    "widths": [],
+    "from": "copy",
+    "where": "copy \"{{CREDITS}}\" in \"{{CREDITS}}\"",
+    "ids": [
+     "copy-residue"
+    ],
+    "wheres": [
+     "copy \"{{CREDITS}}\" in \"{{CREDITS}}\""
+    ]
+   }
+  ],
+  "warns": [
+   {
+    "check": "overlap-text",
+    "where": "section#process > div.wrap.mo-ph > div.mo-ph__stage > figure.mo-ph__pic:nth-of-type(1) \"{{IMG_CH1}}\"",
+    "msg": "lies over the text \"{{IMG_CH2}}\" (div.mo-ph__stage > figure.mo-ph__pic:nth-of-type(2)) (inside a held section or scroll scene, whose motion --quick does not check)",
+    "fix": "move the box off the text (or the text off the box)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "scroll-reveal",
+    "where": "section#process \"8주 레슨은 이렇게 진행됩니다 진단, 교정, 숏게임, 필드까지 네 단계로\"",
+    "msg": "starts \"opacity\" (0.4 s) the moment it is scrolled into view (an IntersectionObserver) on div.mo-ph__words (inside a dealt moment's section, [data-moment]: an enter moment is expected on every kind; its still is judged under reduced motion)",
+    "fix": "show it at rest: no fade, rise or unmask when it is scrolled into view",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "pinned",
+    "where": "section#process > div.wrap.mo-ph \"8주 레슨은 이렇게 진행됩니다 진단, 교정, 숏게임, 필드까지 네 단계로\"",
+    "msg": "held on screen for 3 screens of scroll (position: sticky) while the page moves on (inside a dealt moment's section, [data-moment]: expected on every kind, two moments at most, house rule; its still is judged under reduced motion)",
+    "fix": "let the section scroll with the page",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "text-only",
+    "where": "section#faq \"자주 묻는 질문\"",
+    "msg": "the section is only text: no picture, icon, mock or effect in it",
+    "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#process \"8주 레슨은 이렇게 진행됩니다\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#process / section#coaches",
+    "msg": "146px between these sections, -45% against the median 267px of gaps at a change of ground",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#consult / footer#contact",
+    "msg": "uneven space at the edge of a band: 352px outside its edge, 114px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "div.nav__menu > div.wrap.grid > div.menu-col.span-3:nth-of-type(1) > a:nth-of-type(1) \"입문 1:1 레슨8주 16회, 기본기부터\"",
+    "msg": "5 entries of one menu go to the same place (#programs): \"입문 1:1 레슨8주 16회, 기본기부터\", \"스코어 개선반영상 분석과 주 2회 레슨\", \"필드 레슨코치와 9홀 라운드\", \"숏게임 클리닉어프로치와 퍼팅 4회\"",
+    "fix": "give each menu entry its own target (its section, its tab, its page), or show fewer entries",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-current",
+    "where": "header.nav.nav--centre",
+    "msg": "the nav stays on screen with 4 links to the page's sections, but never marks the one you are in (no link changes as the page scrolls)",
+    "fix": "mark the link of the section on screen (a colour, a weight or a line under it) as the visitor scrolls",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "grounds",
+    "where": "main#top > section.hero.hero--photo \"{{IMG_HERO}} 분당 정자동 1:1 골프 레슨 실내 타석 8개와 \"",
+    "msg": "4 flat grounds across the page (#1b1b1b section, #eeecea section x4, #e4e1dd band, #333231 section x2): three at most (the base, a surface, an inverse)",
+    "fix": "three flat grounds at most (the base, one surface, one inverse): lay the other bands on one of them",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "skip-link",
+    "where": "header.nav.nav--centre > div.wrap.nav__bar > a.skip-link:nth-of-type(1) \"본문으로 건너뛰기\"",
+    "msg": "the first Tab stop is \"본문으로 건너뛰기\", not a skip link: a keyboard user tabs through the whole nav on every visit",
+    "fix": "add the starter's skip link as the header's first child: <a class=\"skip-link\" href=\"#top\">Skip to content</a>",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "action-repeat",
+    "where": "header.nav.nav--centre > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"상담 신청하기\"",
+    "msg": "\"상담 신청하기\" shows 2 times on the first screen at 1440px (nav, hero): the nav's button and the hero's; nothing else on the screen may repeat it",
+    "fix": "show the action once a screen besides the nav's button: the hero's, the close's or the phone bar's, never all at once",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "assumed",
+    "where": "div.hero-text > div.hero__text > p.hero__lead > span \"월 32만 원\"",
+    "msg": "7 facts marked as assumed, for the report: \"월 32만 원\", \"매일 7시~23시\", \"월 32만 원~\", \"월 39만 원~\", \"24만 원\", \"1회 29만 원\", \"1인 월 18만 원\"",
+    "fix": "list each assumed fact in the report for the client to confirm, or take it from the brief",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "form-send",
+    "where": "section#consult > div.wrap > div.grid.grid--top > form.form.span-6 \"mailto:consult@ongyeol-golf.example\"",
+    "msg": "the form opens a mail to consult@ongyeol-golf.example: a stand-in until the client gives its form address; list it in the report",
+    "fix": "send the form to the client's address (data-endpoint) and show the confirmation only after it answers; list a mailto stand-in in the report",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-air",
+    "where": "section#faq / section#consult",
+    "msg": "482px of air between the content of these two sections: 128-480px (64-600px WARN) (SR-3)",
+    "fix": "keep 128-480px of air between the content of neighbouring sections (112-420px on a phone): the sections' padding (--padt, --padb)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-air",
+    "where": "section#faq \"자주 묻는 질문 여기 없는 질문은 상담 때 물어봐 주세요. 상담 신청 양\"",
+    "msg": "the content fills 46.4% of the section's height (418 of 900px): 55% or more (40% WARN) (SR-3)",
+    "fix": "fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "collide",
+    "where": "section#programs > div.wrap > div.grid.grid--top > div.frame.frame--photo \"{{IMG_PROGRAMS}}\"",
+    "msg": "the words \"{{IMG_PROGRAMS}}\" run out of their section into the next one (section#process): the section is shorter than what it holds",
+    "fix": "on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons; pad the page under a fixed bar by the bar's height (top: the first section; end: the footer)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#coaches \"코치 4명을 소개합니다. 모두 KPGA 정회원입니다.\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "main#top > section.hero.hero--photo / section#programs",
+    "msg": "131px between these sections, -30% against the median 187px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#faq / section#consult",
+    "msg": "243px between these sections, +30% against the median 187px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "proximity",
+    "where": "section#coaches > div.wrap > div.grid \"{{IMG_C1}} 김도윤 대표 코치 지도 경력 12년. 입문 레슨과 8\"",
+    "msg": "the rows sit 12px apart, about as close as a picture to its own caption (16px): a caption reads with the row below",
+    "fix": "set the gap between rows at twice the gap between a picture and its caption or more",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "empty-area",
+    "where": "main#top > section.hero.hero--photo \"분당 정자동 1:1 골프 레슨\"",
+    "msg": "45% of the section is empty: 336px above its first content, in its 741px of rows (WARN over 35%, FAIL over 50%)",
+    "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "empty-area",
+    "where": "section#coaches \"코치 4명을 소개합니다. 모두 KPGA 정회원입니다.\"",
+    "msg": "48% of the section is empty: 720px under its last (p), in its 1491px of rows (WARN over 35%, FAIL over 50%)",
+    "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "empty-area",
+    "where": "section#consult \"상담 신청\"",
+    "msg": "36% of the section is empty: 544px under its last (p.t-small.muted), in its 1491px of rows (WARN over 35%, FAIL over 50%)",
+    "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   }
+  ],
+  "crashed": [],
+  "seconds": {
+   "consistency": 109,
+   "layout": 4
+  }
+ },
+ "open": [
+  {
+   "check": "placeholder",
+   "where": "main#top > section.hero.hero--photo \"{{IMG_HERO}} 분당 정자동 1:1 골프 레슨 실내 타석 8개와 \"",
+   "msg": "\"{{IMG_HERO}}\" is a placeholder left on the page (and 11 more like it: \"{{IMG_PROGRAMS}}\", \"{{IMG_CH1}}\", \"{{IMG_CH2}}\", \"{{IMG_CH3}}\", ...)",
+   "fix": "write the real words: take the name or figure from the brief, or remove the claim; no bracketed placeholder ships",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "placeholder"
+   ],
+   "wheres": [
+    "main#top > section.hero.hero--photo \"{{IMG_HERO}} 분당 정자동 1:1 골프 레슨 실내 타석 8개와 \""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "main#top > section.hero.hero--photo \"분당 정자동 1:1 골프 레슨\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "main#top > section.hero.hero--photo \"분당 정자동 1:1 골프 레슨\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "section#programs \"레슨 프로그램과 가격\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#programs \"레슨 프로그램과 가격\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "section#coaches \"코치 4명을 소개합니다. 모두 KPGA 정회원입니다.\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#coaches \"코치 4명을 소개합니다. 모두 KPGA 정회원입니다.\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "section#consult \"상담 신청\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#consult \"상담 신청\""
+   ]
+  },
+  {
+   "check": "card-family",
+   "where": "section#faq > div.wrap > div.grid.grid--top > div.faq.span-6 \"클럽이 없어도 시작할 수 있나요?\"",
+   "msg": "3 cards of one kind (.span-6) set their titles in 2 faces: instrument sans (1, like \"클럽이 없어도 시작할 수 있나요?\"), instrument serif (1, like \"상담 신청\")",
+   "fix": "draw one card part one way: one fill and one title face for every card of a kind (one featured card may differ)",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "card-family"
+   ],
+   "wheres": [
+    "section#faq > div.wrap > div.grid.grid--top > div.faq.span-6 \"클럽이 없어도 시작할 수 있나요?\""
+   ]
+  },
+  {
+   "check": "copy-headline",
+   "where": "h1#hero-h \"분당 정자동 1:1 골프 레슨\"",
+   "msg": "\"분당 정자동 1:1 골프 레슨\" does not name what is sold (golf lessons, golf, lessons, from flags)",
+   "fix": "put the category noun in the h1 (and who it is for, or where), in 2 to 8 words",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "copy-headline"
+   ],
+   "wheres": [
+    "h1#hero-h \"분당 정자동 1:1 골프 레슨\""
+   ]
+  },
+  {
+   "check": "text-contrast",
+   "where": "main#top > section.hero.hero--photo \"{{IMG_HERO}} 분당 정자동 1:1 골프 레슨 실내 타석 8개와 \"",
+   "msg": "body text in #333231 on #1b1b1b reads 1.35:1 (needs 7:1)",
+   "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "text-contrast"
+   ],
+   "wheres": [
+    "main#top > section.hero.hero--photo \"{{IMG_HERO}} 분당 정자동 1:1 골프 레슨 실내 타석 8개와 \""
+   ]
+  },
+  {
+   "check": "section-gaps",
+   "where": "section#faq / section#consult",
+   "msg": "482px between these sections, +80% against the median 268px",
+   "fix": "use one gap between sections (all within 25% of each other)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-gaps"
+   ],
+   "wheres": [
+    "section#faq / section#consult"
+   ]
+  },
+  {
+   "check": "section-gaps",
+   "where": "section#consult / footer#contact",
+   "msg": "466px between these sections, +75% against the median 267px of gaps at a change of ground",
+   "fix": "use one gap between sections (all within 25% of each other)",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-gaps"
+   ],
+   "wheres": [
+    "section#consult / footer#contact"
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "section#process > div.wrap.mo-ph > div.mo-ph__stage \"{{IMG_CH1}}{{IMG_CH2}}{{IMG_CH3}}{{IMG_C\"",
+   "msg": "a band: a box 89% of the section wide on a ground of its own that holds only text: the section's own ground is the band (SR-4)",
+   "fix": "put every block of <main> in a <section>, and give a band its own section instead of a ground inside one",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section",
+    "neighbour"
+   ],
+   "wheres": [
+    "section#process > div.wrap.mo-ph > div.mo-ph__stage \"{{IMG_CH1}}{{IMG_CH2}}{{IMG_CH3}}{{IMG_C\"",
+    "#process section.section.is-live \"8주 레슨은 이렇게 진행됩니다진단, 교정, 숏게임, 필드까\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "div.grid.grid--top > form.form.span-6 > div.field:nth-of-type(1) > label \"이름\"",
+   "msg": "4 text blocks start on a left line at x 780, 700px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (also \"관심 있는 레슨\", \"전화받기 편한 시간\", \"하루 안에 전화드립니다.\") (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "div.grid.grid--top > form.form.span-6 > div.field:nth-of-type(1) > label \"이름\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "h1#hero-h \"분당 정자동 1:1 골프 레슨\"",
+   "msg": "the h1 starts 48px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "h1#hero-h \"분당 정자동 1:1 골프 레슨\""
+   ]
+  },
+  {
+   "check": "split-pair",
+   "where": "section#consult > div.wrap > div.grid.grid--top \"상담 신청 이름과 연락처를 남겨 주시면 코치가 하루 안에 전화드립니다. \"",
+   "msg": "the two columns of the split start 49px apart at the top: a split's columns are top-aligned, 8px either way (SR-8)",
+   "fix": "top-align both columns of the split (align-items: start)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "split-pair"
+   ],
+   "wheres": [
+    "section#consult > div.wrap > div.grid.grid--top \"상담 신청 이름과 연락처를 남겨 주시면 코치가 하루 안에 전화드립니다. \""
+   ]
+  },
+  {
+   "check": "off-grid",
+   "where": "div.grid.grid--top > form.form.span-6 > div.field:nth-of-type(1) > label \"이름\"",
+   "msg": "left edge at 48px, 24px off the page margin at 24px (50 elements, like div.frame.frame--photo); 4 more in this section off the grid too (label at 48px, label at 48px, label at 48px, p.t-small.muted at 48px)",
+   "fix": "move it onto the page margin, or the column edge its section uses",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "off-grid"
+   ],
+   "wheres": [
+    "div.grid.grid--top > form.form.span-6 > div.field:nth-of-type(1) > label \"이름\""
+   ]
+  },
+  {
+   "check": "section-gaps",
+   "where": "section#programs / section#process",
+   "msg": "30px between these sections, -84% against the median 187px",
+   "fix": "use one gap between sections (all within 25% of each other)",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-gaps"
+   ],
+   "wheres": [
+    "section#programs / section#process"
+   ]
+  },
+  {
+   "check": "section-gaps",
+   "where": "section#coaches / section#faq",
+   "msg": "931px between these sections (never on one screen), +398% against the median 187px",
+   "fix": "use one gap between sections (all within 25% of each other)",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-gaps"
+   ],
+   "wheres": [
+    "section#coaches / section#faq"
+   ]
+  },
+  {
+   "check": "collide",
+   "where": "div.span-5.stack-6 > ul.rows > li:nth-of-type(5) > p \"주 1회, 같은 수준 세 명이 함께\"",
+   "msg": "the words \"주 1회, 같은 수준 세 명이 함께\" lie over \"8주 레슨은 이렇게 진행됩니다\" of another section: two lines in one place (they run out of their own section, which is shorter than what it holds)",
+   "fix": "on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons; pad the page under a fixed bar by the bar's height (top: the first section; end: the footer)",
+   "widths": [
+    320
+   ],
+   "from": "consistency",
+   "ids": [
+    "collide"
+   ],
+   "wheres": [
+    "div.span-5.stack-6 > ul.rows > li:nth-of-type(5) > p \"주 1회, 같은 수준 세 명이 함께\""
+   ]
+  },
+  {
+   "check": "collide",
+   "where": "div.wrap > div.grid.grid--top > div.span-5.stack-6 > a.link \"맞는 프로그램 상담받기\"",
+   "msg": "the words \"맞는 프로그램 상담받기\" lie over \"진단, 교정, 숏게임, 필드까지 네 단계로 나눠 가르칩니다\" of another section: two lines in one place (they run out of their own section, which is shorter than what it holds)",
+   "fix": "on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons; pad the page under a fixed bar by the bar's height (top: the first section; end: the footer)",
+   "widths": [
+    320
+   ],
+   "from": "consistency",
+   "ids": [
+    "collide"
+   ],
+   "wheres": [
+    "div.wrap > div.grid.grid--top > div.span-5.stack-6 > a.link \"맞는 프로그램 상담받기\""
+   ]
+  },
+  {
+   "check": "collide",
+   "where": "section#process > div.wrap.mo-ph > div.mo-ph__stage > figure.mo-ph__pic:nth-of-type(1) \"{{IMG_CH1}}\"",
+   "msg": "the words \"{{IMG_CH1}}\" lie over \"{{IMG_CH2}}\": two lines in one place",
+   "fix": "on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons; pad the page under a fixed bar by the bar's height (top: the first section; end: the footer)",
+   "widths": [
+    320
+   ],
+   "from": "consistency",
+   "ids": [
+    "collide"
+   ],
+   "wheres": [
+    "section#process > div.wrap.mo-ph > div.mo-ph__stage > figure.mo-ph__pic:nth-of-type(1) \"{{IMG_CH1}}\""
+   ]
+  },
+  {
+   "check": "collide",
+   "where": "section#process > div.wrap.mo-ph > div.mo-ph__stage > figure.mo-ph__pic:nth-of-type(2) \"{{IMG_CH2}}\"",
+   "msg": "the words \"{{IMG_CH2}}\" lie over \"{{IMG_CH3}}\": two lines in one place",
+   "fix": "on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons; pad the page under a fixed bar by the bar's height (top: the first section; end: the footer)",
+   "widths": [
+    320
+   ],
+   "from": "consistency",
+   "ids": [
+    "collide"
+   ],
+   "wheres": [
+    "section#process > div.wrap.mo-ph > div.mo-ph__stage > figure.mo-ph__pic:nth-of-type(2) \"{{IMG_CH2}}\""
+   ]
+  },
+  {
+   "check": "collide",
+   "where": "section#process > div.wrap.mo-ph > div.mo-ph__stage > figure.mo-ph__pic:nth-of-type(3) \"{{IMG_CH3}}\"",
+   "msg": "the words \"{{IMG_CH3}}\" lie over \"{{IMG_CH4}}\": two lines in one place",
+   "fix": "on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons; pad the page under a fixed bar by the bar's height (top: the first section; end: the footer)",
+   "widths": [
+    320
+   ],
+   "from": "consistency",
+   "ids": [
+    "collide"
+   ],
+   "wheres": [
+    "section#process > div.wrap.mo-ph > div.mo-ph__stage > figure.mo-ph__pic:nth-of-type(3) \"{{IMG_CH3}}\""
+   ]
+  },
+  {
+   "check": "collide",
+   "where": "section#programs > div.wrap > div.grid.grid--top > div.frame.frame--photo \"{{IMG_PROGRAMS}}\"",
+   "msg": "the words \"{{IMG_PROGRAMS}}\" and the card div.wrap.mo-ph > div.mo-ph__stage of another section lie in one place: the words run out of their section, which is shorter than what it holds",
+   "fix": "on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons; pad the page under a fixed bar by the bar's height (top: the first section; end: the footer)",
+   "widths": [
+    320
+   ],
+   "from": "consistency",
+   "ids": [
+    "collide"
+   ],
+   "wheres": [
+    "section#programs > div.wrap > div.grid.grid--top > div.frame.frame--photo \"{{IMG_PROGRAMS}}\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#consult div.btn-row \"상담 신청하기\"",
+   "msg": "starts at x 780; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#consult div.btn-row \"상담 신청하기\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#consult p.t-small.muted \"하루 안에 전화드립니다.\"",
+   "msg": "starts at x 780; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#consult p.t-small.muted \"하루 안에 전화드립니다.\""
+   ]
+  },
+  {
+   "check": "sparse",
+   "where": "#faq section.section \"자주 묻는 질문 여기 없는 질문은 상담 때 물어봐 주세요.\"",
+   "msg": "its content fills 46% of its screen; merge it or give it its visual (0.55 is the aim)",
+   "fix": "fill the section or make it a screen shorter",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "sparse"
+   ],
+   "wheres": [
+    "#faq section.section \"자주 묻는 질문 여기 없는 질문은 상담 때 물어봐 주세요.\""
+   ]
+  },
+  {
+   "check": "hero-lines",
+   "where": "section.hero h1",
+   "msg": "the check fills the h1 to 32 characters (this hero's maxChars in heroes.json), not the page's own: it takes 5 lines at 1440, 3 at most",
+   "fix": "the check fills the h1 to this hero's maxChars, not your own: take the next type pairing the deal printed (start.mjs); when the h1 is final and fits, waive it (target: section.hero h1)",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "hero-lines"
+   ],
+   "wheres": [
+    "section.hero h1"
+   ]
+  },
+  {
+   "check": "sparse",
+   "where": "#coaches section.section.ground-inverse \"코치 4명을 소개합니다. 모두 KPGA 정회원입니다. {{\"",
+   "msg": "its content fills 45% of its screen; merge it or give it its visual (0.55 is the aim)",
+   "fix": "fill the section or make it a screen shorter",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "sparse"
+   ],
+   "wheres": [
+    "#coaches section.section.ground-inverse \"코치 4명을 소개합니다. 모두 KPGA 정회원입니다. {{\""
+   ]
+  },
+  {
+   "check": "hero-fold",
+   "where": "section.hero.hero--photo section.hero.hero--photo \"{{IMG_HERO}} 분당 정자동 1:1 골프 레슨 실내\"",
+   "msg": "ends at y 866, past the fold (844): 1.03 screens tall",
+   "fix": "the hero fills the first screen alone, its button inside it",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "hero-fold"
+   ],
+   "wheres": [
+    "section.hero.hero--photo section.hero.hero--photo \"{{IMG_HERO}} 분당 정자동 1:1 골프 레슨 실내\""
+   ]
+  },
+  {
+   "check": "hero-maxchars",
+   "where": "section.hero.hero--photo section.hero.hero--photo \"{{IMG_HERO}} 분당 정자동 1:1 골프 레슨 그린\"",
+   "msg": "with a 32-character h1 (heroes.json maxChars): ends at y 1017, past the fold (844): 1.20 screens tall",
+   "fix": "shorten the h1 or give the hero room for the longest headline",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "hero-maxchars"
+   ],
+   "wheres": [
+    "section.hero.hero--photo section.hero.hero--photo \"{{IMG_HERO}} 분당 정자동 1:1 골프 레슨 그린\""
+   ]
+  },
+  {
+   "check": "copy-residue",
+   "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+   "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+   "widths": [],
+   "from": "copy",
+   "where": "copy \"{{IMG_HERO}}\" in \"{{IMG_HERO}}\"",
+   "ids": [
+    "copy-residue"
+   ],
+   "wheres": [
+    "copy \"{{IMG_HERO}}\" in \"{{IMG_HERO}}\""
+   ]
+  },
+  {
+   "check": "copy-residue",
+   "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+   "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+   "widths": [],
+   "from": "copy",
+   "where": "copy \"{{IMG_PROGRAMS}}\" in \"{{IMG_PROGRAMS}}\"",
+   "ids": [
+    "copy-residue"
+   ],
+   "wheres": [
+    "copy \"{{IMG_PROGRAMS}}\" in \"{{IMG_PROGRAMS}}\""
+   ]
+  },
+  {
+   "check": "copy-residue",
+   "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+   "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+   "widths": [],
+   "from": "copy",
+   "where": "copy \"{{IMG_CH1}}\" in \"{{IMG_CH1}}\"",
+   "ids": [
+    "copy-residue"
+   ],
+   "wheres": [
+    "copy \"{{IMG_CH1}}\" in \"{{IMG_CH1}}\""
+   ]
+  },
+  {
+   "check": "copy-residue",
+   "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+   "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+   "widths": [],
+   "from": "copy",
+   "where": "copy \"{{IMG_CH2}}\" in \"{{IMG_CH2}}\"",
+   "ids": [
+    "copy-residue"
+   ],
+   "wheres": [
+    "copy \"{{IMG_CH2}}\" in \"{{IMG_CH2}}\""
+   ]
+  },
+  {
+   "check": "copy-residue",
+   "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+   "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+   "widths": [],
+   "from": "copy",
+   "where": "copy \"{{IMG_CH3}}\" in \"{{IMG_CH3}}\"",
+   "ids": [
+    "copy-residue"
+   ],
+   "wheres": [
+    "copy \"{{IMG_CH3}}\" in \"{{IMG_CH3}}\""
+   ]
+  },
+  {
+   "check": "copy-residue",
+   "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+   "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+   "widths": [],
+   "from": "copy",
+   "where": "copy \"{{IMG_CH4}}\" in \"{{IMG_CH4}}\"",
+   "ids": [
+    "copy-residue"
+   ],
+   "wheres": [
+    "copy \"{{IMG_CH4}}\" in \"{{IMG_CH4}}\""
+   ]
+  },
+  {
+   "check": "copy-residue",
+   "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+   "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+   "widths": [],
+   "from": "copy",
+   "where": "copy \"{{IMG_C1}}\" in \"{{IMG_C1}}\"",
+   "ids": [
+    "copy-residue"
+   ],
+   "wheres": [
+    "copy \"{{IMG_C1}}\" in \"{{IMG_C1}}\""
+   ]
+  },
+  {
+   "check": "copy-residue",
+   "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+   "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+   "widths": [],
+   "from": "copy",
+   "where": "copy \"{{IMG_C2}}\" in \"{{IMG_C2}}\"",
+   "ids": [
+    "copy-residue"
+   ],
+   "wheres": [
+    "copy \"{{IMG_C2}}\" in \"{{IMG_C2}}\""
+   ]
+  },
+  {
+   "check": "copy-residue",
+   "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+   "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+   "widths": [],
+   "from": "copy",
+   "where": "copy \"{{IMG_C3}}\" in \"{{IMG_C3}}\"",
+   "ids": [
+    "copy-residue"
+   ],
+   "wheres": [
+    "copy \"{{IMG_C3}}\" in \"{{IMG_C3}}\""
+   ]
+  },
+  {
+   "check": "copy-residue",
+   "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+   "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+   "widths": [],
+   "from": "copy",
+   "where": "copy \"{{IMG_C4}}\" in \"{{IMG_C4}}\"",
+   "ids": [
+    "copy-residue"
+   ],
+   "wheres": [
+    "copy \"{{IMG_C4}}\" in \"{{IMG_C4}}\""
+   ]
+  },
+  {
+   "check": "copy-residue",
+   "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+   "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+   "widths": [],
+   "from": "copy",
+   "where": "copy \"{{IMG_CONSULT}}\" in \"{{IMG_CONSULT}}\"",
+   "ids": [
+    "copy-residue"
+   ],
+   "wheres": [
+    "copy \"{{IMG_CONSULT}}\" in \"{{IMG_CONSULT}}\""
+   ]
+  },
+  {
+   "check": "copy-residue",
+   "msg": "chatbot residue, a template token, markdown or a [NEED] left on the page",
+   "fix": "write the real words from the brief, or leave the element out and list what is missing in the report (references/copy-tells.md)",
+   "widths": [],
+   "from": "copy",
+   "where": "copy \"{{CREDITS}}\" in \"{{CREDITS}}\"",
+   "ids": [
+    "copy-residue"
+   ],
+   "wheres": [
+    "copy \"{{CREDITS}}\" in \"{{CREDITS}}\""
+   ]
+  }
+ ],
+ "waived": [],
+ "warnCount": 24,
+ "at": "2026-11-23T13:19:01.261Z",
+ "session": "b21a322e-0940-524c-af92-4d060caccfcc"
+}

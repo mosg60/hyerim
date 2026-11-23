@@ -1,0 +1,11 @@
+{
+ "page": "index.html",
+ "url": null,
+ "root": null,
+ "kind": "service",
+ "category": "golf lessons",
+ "primary": "상담 신청하기",
+ "rounds": 3,
+ "start": "2026-11-23T12:59:14.282Z",
+ "by": "gate.mjs --start"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "온결 골프 아카데미",
+  "note": "Coined stand-in name for a draft; the client will replace it with the academy's real name.",
+  "searched": true,
+  "queries": [{ "query": "\"온결 골프\" 아카데미", "result": "no business of that name in the first results" }]
+}
