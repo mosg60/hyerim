@@ -3,3 +3,6 @@ shots/
 .taste-skill/chrome-*/
 .taste-skill/consistency/
 .taste-skill/raw/
+.taste-skill/gate.json
+.taste-skill/gate-blocks.json
+.taste-skill/fetch.log
