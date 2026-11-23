@@ -1,0 +1,20 @@
+{
+ "palettes": [
+  "three-stones"
+ ],
+ "types": [
+  "instrument-serif"
+ ],
+ "dealt": [
+  "instrument-serif",
+  "albert",
+  "newsreader"
+ ],
+ "moments": [
+  {
+   "id": "photo-chapters",
+   "at": "2026-11-23T12:59:36.562Z",
+   "seed": "855e47b8"
+  }
+ ]
+}
